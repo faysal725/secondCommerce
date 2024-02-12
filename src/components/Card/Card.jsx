@@ -35,7 +35,6 @@ export default function Card({productDetails}) {
         <div className="mt-auto flex justify-between py-3">
             <div>
                 <h3 className="text-sm text-gray-700 ">
-                    <span aria-hidden="true" className="absolute inset-0" />
                     {productDetails.title}
                 </h3>
                 <p className="mt-1 text-sm text-gray-500">{productDetails.color}</p>
@@ -46,7 +45,7 @@ export default function Card({productDetails}) {
             <button         
             onClick={() => addToCart()}
             className="rounded bg-indigo-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Add to cart</button>
-            <Link href={'/product-details/'+productDetails.id} className="rounded bg-red-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">View Details</Link>
+            <a href={'/product-details/'+productDetails.id} className="rounded bg-red-600 px-2 py-1 text-xs font-semibold text-white shadow-sm hover:bg-red-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-600">View Details</a>
         </div>
     </div>
   )
